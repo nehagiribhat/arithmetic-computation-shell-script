@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 read -p "Enter 3 input numbers: " a b c
 echo "$a $b $c"
 
