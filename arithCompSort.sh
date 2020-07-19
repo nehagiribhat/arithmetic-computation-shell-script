@@ -39,3 +39,18 @@ do
 done
 
 echo "Descending Sorted: ${arrComp[@]}"
+
+for ((i=0; i<=3; i++))
+do
+        for ((j=$((i+1)); j<=3; j++))
+        do
+                while [ ${arrComp[$i]} -gt ${arrComp[$j]} ]
+                do
+                        var=${arrComp[$i]}
+                        arrComp[$i]=${arrComp[$j]}
+                        arrComp[$j]=$var
+                done
+        done
+done
+
+echo "Ascending Sorted: ${arrComp[@]}"
