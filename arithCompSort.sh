@@ -17,3 +17,10 @@ computation[a%b+c]=$comp4
 
 echo "expression = ${!computation[@]}"
 echo "results = ${computation[@]}"
+
+arrComp[0]=${computation[a+b*c]}
+arrComp[1]=${computation[a*b+c]}
+arrComp[2]=${computation[c+a/b]}
+arrComp[3]=${computation[a%b+c]}
+
+echo "array values = ${arrComp[@]}"
