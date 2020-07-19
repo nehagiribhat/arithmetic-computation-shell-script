@@ -24,3 +24,18 @@ arrComp[2]=${computation[c+a/b]}
 arrComp[3]=${computation[a%b+c]}
 
 echo "array values = ${arrComp[@]}"
+
+for ((i=0; i<=3; i++))
+do
+	for ((j=$((i+1)); j<=3; j++))
+	do
+		while [ ${arrComp[$i]} -lt ${arrComp[$j]} ]
+		do
+			var=${arrComp[$i]}
+			arrComp[$i]=${arrComp[$j]}
+			arrComp[$j]=$var
+		done
+	done
+done
+
+echo "Descending Sorted: ${arrComp[@]}"
